@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hastane));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnHasta = new System.Windows.Forms.Button();
+            this.btnDoktor = new System.Windows.Forms.Button();
+            this.btnSekreter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,35 +40,38 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnHasta
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(12, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 160);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnHasta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHasta.BackgroundImage")));
+            this.btnHasta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHasta.Location = new System.Drawing.Point(12, 98);
+            this.btnHasta.Name = "btnHasta";
+            this.btnHasta.Size = new System.Drawing.Size(171, 160);
+            this.btnHasta.TabIndex = 0;
+            this.btnHasta.UseVisualStyleBackColor = true;
+            this.btnHasta.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnDoktor
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(189, 98);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(171, 160);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDoktor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDoktor.BackgroundImage")));
+            this.btnDoktor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDoktor.Location = new System.Drawing.Point(189, 98);
+            this.btnDoktor.Name = "btnDoktor";
+            this.btnDoktor.Size = new System.Drawing.Size(171, 160);
+            this.btnDoktor.TabIndex = 0;
+            this.btnDoktor.UseVisualStyleBackColor = true;
+            this.btnDoktor.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnSekreter
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(366, 98);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(171, 160);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSekreter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSekreter.BackgroundImage")));
+            this.btnSekreter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSekreter.Location = new System.Drawing.Point(366, 98);
+            this.btnSekreter.Name = "btnSekreter";
+            this.btnSekreter.Size = new System.Drawing.Size(171, 160);
+            this.btnSekreter.TabIndex = 0;
+            this.btnSekreter.UseVisualStyleBackColor = true;
+            this.btnSekreter.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -115,22 +118,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(525, 80);
             this.panel1.TabIndex = 2;
-   //         this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Hastane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(549, 288);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSekreter);
+            this.Controls.Add(this.btnDoktor);
+            this.Controls.Add(this.btnHasta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Hastane";
-            this.Text = "Hastane Giriş Paneli";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Evren Hastanesi Giriş Paneli";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -140,9 +146,9 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnHasta;
+        private Button btnDoktor;
+        private Button btnSekreter;
         private Label label1;
         private Label label2;
         private Label label3;

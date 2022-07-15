@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHastaGiris));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -91,9 +92,10 @@
             this.btnGiris.Location = new System.Drawing.Point(114, 116);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(75, 23);
-            this.btnGiris.TabIndex = 2;
+            this.btnGiris.TabIndex = 3;
             this.btnGiris.Text = "Giriş Yap";
             this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // linklblUyeOl
             // 
@@ -101,9 +103,10 @@
             this.linklblUyeOl.Location = new System.Drawing.Point(195, 91);
             this.linklblUyeOl.Name = "linklblUyeOl";
             this.linklblUyeOl.Size = new System.Drawing.Size(42, 15);
-            this.linklblUyeOl.TabIndex = 3;
+            this.linklblUyeOl.TabIndex = 2;
             this.linklblUyeOl.TabStop = true;
             this.linklblUyeOl.Text = "Üye Ol";
+            this.linklblUyeOl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblUyeOl_LinkClicked);
             // 
             // panel1
             // 
@@ -116,8 +119,10 @@
             // 
             // frmHastaGiris
             // 
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(247, 153);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linklblUyeOl);
@@ -126,8 +131,11 @@
             this.Controls.Add(this.textSifre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmHastaGiris";
-            this.Text = "frmHastaGiris";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Hasta Girişi";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.linklblUyeOl = new System.Windows.Forms.LinkLabel();
             this.btnGiris = new System.Windows.Forms.Button();
             this.maskedTc = new System.Windows.Forms.MaskedTextBox();
             this.textSifre = new System.Windows.Forms.TextBox();
@@ -58,16 +57,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Sekreter Giriş Paneli";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // linklblUyeOl
-            // 
-            this.linklblUyeOl.AutoSize = true;
-            this.linklblUyeOl.Location = new System.Drawing.Point(210, 108);
-            this.linklblUyeOl.Name = "linklblUyeOl";
-            this.linklblUyeOl.Size = new System.Drawing.Size(42, 15);
-            this.linklblUyeOl.TabIndex = 10;
-            this.linklblUyeOl.TabStop = true;
-            this.linklblUyeOl.Text = "Üye Ol";
             // 
             // btnGiris
             // 
@@ -120,7 +109,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 172);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.linklblUyeOl);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.maskedTc);
             this.Controls.Add(this.textSifre);
@@ -139,7 +127,6 @@
 
         private Panel panel1;
         private Label label1;
-        private LinkLabel linklblUyeOl;
         private Button btnGiris;
         private MaskedTextBox maskedTc;
         private TextBox textSifre;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHastaKayit));
             this.textTc = new System.Windows.Forms.MaskedTextBox();
             this.textSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,7 +57,7 @@
             this.textSifre.Location = new System.Drawing.Point(89, 128);
             this.textSifre.Name = "textSifre";
             this.textSifre.Size = new System.Drawing.Size(121, 23);
-            this.textSifre.TabIndex = 3;
+            this.textSifre.TabIndex = 4;
             this.textSifre.UseSystemPasswordChar = true;
             // 
             // label3
@@ -104,14 +105,14 @@
             this.textAd.Location = new System.Drawing.Point(89, 12);
             this.textAd.Name = "textAd";
             this.textAd.Size = new System.Drawing.Size(121, 23);
-            this.textAd.TabIndex = 6;
+            this.textAd.TabIndex = 0;
             // 
             // textSoyad
             // 
             this.textSoyad.Location = new System.Drawing.Point(89, 41);
             this.textSoyad.Name = "textSoyad";
             this.textSoyad.Size = new System.Drawing.Size(121, 23);
-            this.textSoyad.TabIndex = 6;
+            this.textSoyad.TabIndex = 1;
             // 
             // label5
             // 
@@ -129,7 +130,7 @@
             this.textTelNo.Mask = "(999) 000-0000";
             this.textTelNo.Name = "textTelNo";
             this.textTelNo.Size = new System.Drawing.Size(121, 23);
-            this.textTelNo.TabIndex = 2;
+            this.textTelNo.TabIndex = 3;
             // 
             // label6
             // 
@@ -144,24 +145,30 @@
             // comboCins
             // 
             this.comboCins.FormattingEnabled = true;
+            this.comboCins.Items.AddRange(new object[] {
+            "Kadın",
+            "Erkek"});
             this.comboCins.Location = new System.Drawing.Point(89, 160);
             this.comboCins.Name = "comboCins";
             this.comboCins.Size = new System.Drawing.Size(121, 23);
-            this.comboCins.TabIndex = 7;
+            this.comboCins.TabIndex = 5;
             // 
             // btnKayitOl
             // 
             this.btnKayitOl.Location = new System.Drawing.Point(110, 189);
             this.btnKayitOl.Name = "btnKayitOl";
             this.btnKayitOl.Size = new System.Drawing.Size(100, 37);
-            this.btnKayitOl.TabIndex = 8;
+            this.btnKayitOl.TabIndex = 6;
             this.btnKayitOl.Text = "Kayıt Ol";
             this.btnKayitOl.UseVisualStyleBackColor = true;
+            this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);
             // 
             // frmHastaKayit
             // 
+            this.AcceptButton = this.btnKayitOl;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(229, 247);
             this.Controls.Add(this.btnKayitOl);
             this.Controls.Add(this.comboCins);
@@ -176,9 +183,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmHastaKayit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHastaKayit";
-            this.Load += new System.EventHandler(this.frmHastaKayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
