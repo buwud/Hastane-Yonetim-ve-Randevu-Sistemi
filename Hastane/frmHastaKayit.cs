@@ -30,5 +30,10 @@ namespace Hastane
             else
                 MessageBox.Show("Yanlış veya eksik bilgi girişi yaptınız, tekrar deneyiniz!", "Hasta Kaydı", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void frmHastaKayit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

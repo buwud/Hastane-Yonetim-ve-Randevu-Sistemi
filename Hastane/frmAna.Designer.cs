@@ -58,7 +58,7 @@
             this.btnDoktor.Location = new System.Drawing.Point(189, 98);
             this.btnDoktor.Name = "btnDoktor";
             this.btnDoktor.Size = new System.Drawing.Size(171, 160);
-            this.btnDoktor.TabIndex = 0;
+            this.btnDoktor.TabIndex = 1;
             this.btnDoktor.UseVisualStyleBackColor = true;
             this.btnDoktor.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -69,7 +69,7 @@
             this.btnSekreter.Location = new System.Drawing.Point(366, 98);
             this.btnSekreter.Name = "btnSekreter";
             this.btnSekreter.Size = new System.Drawing.Size(171, 160);
-            this.btnSekreter.TabIndex = 0;
+            this.btnSekreter.TabIndex = 2;
             this.btnSekreter.UseVisualStyleBackColor = true;
             this.btnSekreter.Click += new System.EventHandler(this.button3_Click);
             // 

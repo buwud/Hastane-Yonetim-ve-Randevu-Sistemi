@@ -27,7 +27,7 @@ namespace Hastane
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if (DatabaseHasta.HastaGirisi(maskedTc.Text, textSifre.Text))
+            if (DatabaseHasta.HastaGirisi(maskedTc.Text, textSifre.Text)&& maskedTc.Text!=""&& textSifre.Text!="")
             {
                 
                 MessageBox.Show("Giriş Başarılı!", "Hasta Giriş", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -40,6 +40,6 @@ namespace Hastane
             {
                 MessageBox.Show("Girilen TC no veya şifre yanlış!", "Hasta Giriş", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }   
+        }
     }
 }

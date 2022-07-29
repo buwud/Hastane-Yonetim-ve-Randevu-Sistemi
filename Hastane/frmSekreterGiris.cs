@@ -16,5 +16,20 @@ namespace Hastane
         {
             InitializeComponent();
         }
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            if (DatabaseSekreter.SekreterGirisKontrol(mskTc.Text, textSifre.Text))
+            {
+                MessageBox.Show("Giriş Başarılı!", "Sekreter Giriş", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmSekreterDetay sekreterDetay = new frmSekreterDetay();
+                sekreterDetay.sekreterTc = mskTc.Text;
+                sekreterDetay.Show();
+                this.Hide();
+                
+            }
+            else
+                MessageBox.Show("Girilen TC no veya şifre yanlış!", "Sekreter Giriş", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoktorBilgiDuzenle));
             this.textSoyad = new System.Windows.Forms.TextBox();
             this.textAd = new System.Windows.Forms.TextBox();
             this.textTc = new System.Windows.Forms.MaskedTextBox();
@@ -36,8 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnKayitOl = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnDuzenle = new System.Windows.Forms.Button();
+            this.cmbBrans = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -99,7 +100,6 @@
             this.textSifre.Name = "textSifre";
             this.textSifre.Size = new System.Drawing.Size(121, 23);
             this.textSifre.TabIndex = 26;
-            this.textSifre.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -111,22 +111,23 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Şifre:";
             // 
-            // btnKayitOl
+            // btnDuzenle
             // 
-            this.btnKayitOl.Location = new System.Drawing.Point(110, 157);
-            this.btnKayitOl.Name = "btnKayitOl";
-            this.btnKayitOl.Size = new System.Drawing.Size(100, 37);
-            this.btnKayitOl.TabIndex = 28;
-            this.btnKayitOl.Text = "Güncelle";
-            this.btnKayitOl.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Location = new System.Drawing.Point(110, 157);
+            this.btnDuzenle.Name = "btnDuzenle";
+            this.btnDuzenle.Size = new System.Drawing.Size(100, 37);
+            this.btnDuzenle.TabIndex = 28;
+            this.btnDuzenle.Text = "Güncelle";
+            this.btnDuzenle.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Click += new System.EventHandler(this.btnKayitOl_Click);
             // 
-            // comboBox1
+            // cmbBrans
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(89, 99);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 29;
+            this.cmbBrans.FormattingEnabled = true;
+            this.cmbBrans.Location = new System.Drawing.Point(89, 99);
+            this.cmbBrans.Name = "cmbBrans";
+            this.cmbBrans.Size = new System.Drawing.Size(121, 23);
+            this.cmbBrans.TabIndex = 29;
             // 
             // label5
             // 
@@ -140,11 +141,12 @@
             // 
             // frmDoktorBilgiDuzenle
             // 
+            this.AcceptButton = this.btnDuzenle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(236, 236);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btnKayitOl);
+            this.ClientSize = new System.Drawing.Size(236, 210);
+            this.Controls.Add(this.cmbBrans);
+            this.Controls.Add(this.btnDuzenle);
             this.Controls.Add(this.textSifre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textSoyad);
@@ -154,8 +156,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmDoktorBilgiDuzenle";
-            this.Text = "frmDoktorBilgiDuzenle";
+            this.Text = "Doktor Bilgi Düzenle";
+            this.Load += new System.EventHandler(this.frmDoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,8 +176,8 @@
         private Label label2;
         private TextBox textSifre;
         private Label label3;
-        private Button btnKayitOl;
-        private ComboBox comboBox1;
+        private Button btnDuzenle;
+        private ComboBox cmbBrans;
         private Label label5;
     }
 }

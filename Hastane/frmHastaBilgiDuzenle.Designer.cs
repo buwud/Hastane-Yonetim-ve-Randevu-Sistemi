@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnKayitOl = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHastaBilgiDuzenle));
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.comboCins = new System.Windows.Forms.ComboBox();
             this.textSoyad = new System.Windows.Forms.TextBox();
             this.textAd = new System.Windows.Forms.TextBox();
@@ -43,18 +44,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnKayitOl
+            // btnGuncelle
             // 
-            this.btnKayitOl.Location = new System.Drawing.Point(99, 190);
-            this.btnKayitOl.Name = "btnKayitOl";
-            this.btnKayitOl.Size = new System.Drawing.Size(100, 37);
-            this.btnKayitOl.TabIndex = 21;
-            this.btnKayitOl.Text = "Güncelle";
-            this.btnKayitOl.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Location = new System.Drawing.Point(99, 190);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(100, 37);
+            this.btnGuncelle.TabIndex = 21;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnKayitOl_Click);
             // 
             // comboCins
             // 
             this.comboCins.FormattingEnabled = true;
+            this.comboCins.Items.AddRange(new object[] {
+            "Kadin",
+            "Erkek"});
             this.comboCins.Location = new System.Drawing.Point(78, 161);
             this.comboCins.Name = "comboCins";
             this.comboCins.Size = new System.Drawing.Size(121, 23);
@@ -84,6 +89,7 @@
             // 
             // textTc
             // 
+            this.textTc.Enabled = false;
             this.textTc.Location = new System.Drawing.Point(78, 71);
             this.textTc.Mask = "00000000000";
             this.textTc.Name = "textTc";
@@ -96,7 +102,6 @@
             this.textSifre.Name = "textSifre";
             this.textSifre.Size = new System.Drawing.Size(121, 23);
             this.textSifre.TabIndex = 11;
-            this.textSifre.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -158,12 +163,13 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "TC Kimlik No:";
             // 
-            // frmBilgiDuzenle
+            // frmHastaBilgiDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(225, 245);
-            this.Controls.Add(this.btnKayitOl);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.comboCins);
             this.Controls.Add(this.textSoyad);
             this.Controls.Add(this.textAd);
@@ -176,8 +182,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Name = "frmBilgiDuzenle";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmHastaBilgiDuzenle";
             this.Text = "Bilgi Düzenle";
+            this.Load += new System.EventHandler(this.frmHastaBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,7 +193,7 @@
 
         #endregion
 
-        private Button btnKayitOl;
+        private Button btnGuncelle;
         private ComboBox comboCins;
         private TextBox textSoyad;
         private TextBox textAd;

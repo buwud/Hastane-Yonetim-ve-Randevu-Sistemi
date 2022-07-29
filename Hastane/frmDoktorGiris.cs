@@ -17,6 +17,19 @@ namespace Hastane
             InitializeComponent();
         }
 
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
 
+            if (DatabaseDoktor.GirisYap(maskedTc.Text, textSifre.Text))
+            {
+                frmDoktorDetay doktorDetay = new frmDoktorDetay();
+                MessageBox.Show("Giriş başarılı!", "Doktor Girişi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                doktorDetay.tc = maskedTc.Text;
+                doktorDetay.Show();
+                this.Hide();
+            }
+            else
+                MessageBox.Show("Hatalı kullanıcı adı veya şifre!", "Doktor Girişi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }

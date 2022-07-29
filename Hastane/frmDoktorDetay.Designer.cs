@@ -141,14 +141,26 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 19);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(557, 332);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox4
             // 
@@ -171,6 +183,7 @@
             this.btnDuyurular.TabIndex = 0;
             this.btnDuyurular.Text = "Duyurular";
             this.btnDuyurular.UseVisualStyleBackColor = true;
+            this.btnDuyurular.Click += new System.EventHandler(this.btnDuyurular_Click);
             // 
             // btnCikis
             // 
@@ -180,6 +193,7 @@
             this.btnCikis.TabIndex = 0;
             this.btnCikis.Text = "Çıkış";
             this.btnCikis.UseVisualStyleBackColor = true;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // btnGuncelle
             // 
@@ -189,6 +203,7 @@
             this.btnGuncelle.TabIndex = 0;
             this.btnGuncelle.Text = "Bilgi Düzenle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // frmDoktorDetay
             // 
@@ -201,6 +216,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDoktorDetay";
             this.Text = "frmDoktorDetay";
+            this.Load += new System.EventHandler(this.frmDoktorDetay_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

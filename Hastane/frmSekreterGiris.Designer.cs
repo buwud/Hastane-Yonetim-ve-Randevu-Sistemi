@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSekreterGiris));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGiris = new System.Windows.Forms.Button();
-            this.maskedTc = new System.Windows.Forms.MaskedTextBox();
+            this.mskTc = new System.Windows.Forms.MaskedTextBox();
             this.textSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,14 +67,15 @@
             this.btnGiris.TabIndex = 9;
             this.btnGiris.Text = "Giriş Yap";
             this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
-            // maskedTc
+            // mskTc
             // 
-            this.maskedTc.Location = new System.Drawing.Point(104, 74);
-            this.maskedTc.Mask = "00000000000";
-            this.maskedTc.Name = "maskedTc";
-            this.maskedTc.Size = new System.Drawing.Size(100, 23);
-            this.maskedTc.TabIndex = 5;
+            this.mskTc.Location = new System.Drawing.Point(104, 74);
+            this.mskTc.Mask = "00000000000";
+            this.mskTc.Name = "mskTc";
+            this.mskTc.Size = new System.Drawing.Size(100, 23);
+            this.mskTc.TabIndex = 5;
             // 
             // textSifre
             // 
@@ -105,17 +107,22 @@
             // 
             // frmSekreterGiris
             // 
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(272, 172);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGiris);
-            this.Controls.Add(this.maskedTc);
+            this.Controls.Add(this.mskTc);
             this.Controls.Add(this.textSifre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmSekreterGiris";
-            this.Text = "frmSekreterGiris";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sekreter Girişi";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -128,7 +135,7 @@
         private Panel panel1;
         private Label label1;
         private Button btnGiris;
-        private MaskedTextBox maskedTc;
+        private MaskedTextBox mskTc;
         private TextBox textSifre;
         private Label label3;
         private Label label2;

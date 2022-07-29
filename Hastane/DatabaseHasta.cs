@@ -10,7 +10,7 @@ namespace Hastane
 {
     internal class DatabaseHasta
     {
-        static SqlConnection baglanti = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\yeolb\Documents\Hastane_DB.mdf;Integrated Security = True; Connect Timeout = 30");
+        static SqlConnection baglanti = new SqlConnection(Baglanti.baglantiAdres);
 
 
         public static void HastaKaydiYap(string ad, string soyad, string tc, string tel, 
@@ -102,6 +102,61 @@ namespace Hastane
             }
             baglanti.Close();
             return doktorlar;
+        }
+        public static DataTable RandevuCekme(string doktor)
+        {
+            baglanti.Open();
+            string sql = "select * from Randevular where RandevuDoktor='" + doktor + "' and RandevuDurum=0";
+            SqlCommand cmd = new SqlCommand(sql,baglanti);
+            SqlDataAdapter adaptor = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adaptor.Fill(dt);
+            baglanti.Close();
+            return dt;
+        }
+        public static List<string> HastaBilgiDuzenleVeriCek(string tc)
+        {
+            baglanti.Open();
+            List<string> hastalar = new List<string>();
+            string sql = "select * from Hasta where HastaTC = '" + tc + "'";
+            SqlCommand cmd = new SqlCommand(sql, baglanti);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                hastalar.Add(dr[1].ToString());
+                hastalar.Add(dr[2].ToString());
+                hastalar.Add(dr[4].ToString());
+                hastalar.Add(dr[5].ToString());
+                hastalar.Add(dr[6].ToString());
+            }
+            baglanti.Close();
+            return hastalar;
+        }
+        public static void HastaBilgiGuncelle(string ad, string soyad, string tel, string sifre, string cins, string tc)
+        {
+            string sql = "update Hasta set HastaAdi=@pAd, HastaSoyadi=@pSoyad, HastaTelefon=@pTel ," +
+                "HastaSifre=@pSifre, HastaCinsiyet=@pCins where HastaTC=@pTc";
+            SqlCommand cmd = new SqlCommand(sql, baglanti);
+            cmd.Parameters.AddWithValue("@pAd", ad);
+            cmd.Parameters.AddWithValue("@pSoyad", soyad);
+            cmd.Parameters.AddWithValue("@pTel", tel);
+            cmd.Parameters.AddWithValue("@pSifre", sifre);
+            cmd.Parameters.AddWithValue("@pCins", cins);
+            cmd.Parameters.AddWithValue("@pTc", tc);
+            baglanti.Open();
+            cmd.ExecuteNonQuery();
+            baglanti.Close();
+        }
+        public static void RandevuAlma(string tc,string sikayet,string id)
+        {
+            string sql = "update Randevular set RandevuDurum=1 , HastaTc=@pTc , HastaSikayet=@pSkyt where Id=@pId";
+            SqlCommand cmd = new SqlCommand(sql, baglanti);
+            cmd.Parameters.AddWithValue("@pTc", tc);
+            cmd.Parameters.AddWithValue("@pSkyt", sikayet);
+            cmd.Parameters.AddWithValue("@pId",id);
+            baglanti.Open();
+            cmd.ExecuteNonQuery();
+            baglanti.Close();
         }
     }
 }

@@ -188,6 +188,7 @@
             this.Name = "frmHastaKayit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHastaKayit";
+            this.Load += new System.EventHandler(this.frmHastaKayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
