@@ -460,11 +460,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yeolb\\Desktop\\Hastane\\Hastane\\Hastane.csproj",
+      "projectUniqueName": "C:\\Users\\yeolb\\Desktop\\projects_cs\\Hastane\\Hastane\\Hastane.csproj",
       "projectName": "Hastane",
-      "projectPath": "C:\\Users\\yeolb\\Desktop\\Hastane\\Hastane\\Hastane.csproj",
+      "projectPath": "C:\\Users\\yeolb\\Desktop\\projects_cs\\Hastane\\Hastane\\Hastane.csproj",
       "packagesPath": "C:\\Users\\yeolb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yeolb\\Desktop\\Hastane\\Hastane\\obj\\",
+      "outputPath": "C:\\Users\\yeolb\\Desktop\\projects_cs\\Hastane\\Hastane\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

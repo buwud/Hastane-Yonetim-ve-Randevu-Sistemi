@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D5vI9ybu+Yz3JqOiVv/bYhCxLJ4oji051esMkJcQJ5cTM0efm3SVrJInQgmcRYveR2sfZGsRoVlqZ9k69f3qXg==",
+  "dgSpecHash": "XmnbBrNiPUn4zQ4n3a5qBNY1IpczQ50iJmgU8KFA2d4ofOXdq+1VtvuBmZvs8DvdZKVMTDQp59fRRPcdW8jfdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yeolb\\Desktop\\Hastane\\Hastane\\Hastane.csproj",
+  "projectFilePath": "C:\\Users\\yeolb\\Desktop\\projects_cs\\Hastane\\Hastane\\Hastane.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yeolb\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

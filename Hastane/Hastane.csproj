@@ -16,12 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="bin\Debug\net6.0-windows\App.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
@@ -41,9 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Properties\App.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Folder Include="bin\Debug\net6.0-windows\" />
   </ItemGroup>
 
 </Project>

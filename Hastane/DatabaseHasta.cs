@@ -31,6 +31,21 @@ namespace Hastane
             cmd.ExecuteNonQuery();
             baglanti.Close();
         }
+        public static bool HastaTcKontrol(string tc)//aynı tc ile başka biri kayıt olamasın
+        {
+            bool varMi = false;
+            string sql = "select * from Hasta where HastaTC=@pTc";
+            SqlCommand cmd = new SqlCommand(sql, baglanti);
+            cmd.Parameters.AddWithValue("@pTc", tc);
+            baglanti.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                varMi = true;
+            }
+            baglanti.Close();
+            return varMi;
+        }
         public static bool HastaGirisi(string tc , string sifre)
         {
             bool dogru = false;

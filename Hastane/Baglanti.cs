@@ -8,7 +8,7 @@ namespace Hastane
 {
     internal class Baglanti
     {
-        static string yol = File.ReadAllText(@"C:\test.txt");
-        public static string baglantiAdres = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+yol+@"\Hastane_DB.mdf;Integrated Security=True;Connect Timeout=30";
+        //static string yol = File.ReadAllText(@"C:\test.txt");
+        public static string baglantiAdres = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\yeolb\Desktop\projects_cs\Hastane\Hastane\Hastane_DB.mdf;Integrated Security=True;Connect Timeout=30";
     }
 }
