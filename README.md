@@ -1,4 +1,4 @@
-# C# Windows Console Application, Hospital Management System
+# C# Windows Application, Hospital Management System
 
 
 | ![1](https://user-images.githubusercontent.com/91667950/181905855-e064b65d-ddeb-4045-b3b7-cfeaa06b94cf.png) | ![2](https://user-images.githubusercontent.com/91667950/181906364-e5a098f9-56e4-45e2-b955-b18aed74a599.png) |
